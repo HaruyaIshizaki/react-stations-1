@@ -1,3 +1,4 @@
+import styles from "./css/Threads.module.css";
 import { useEffect, useState } from "react";
 
 export const Threads = () => {
@@ -32,19 +33,21 @@ export const Threads = () => {
   };
 
   return (
-    <div>
-      <h2 class="thread_title">スレッド一覧</h2>
+    <div className={styles.threads}>
+      <h2 className={styles.message}>スレッド一覧</h2>
       <ul style={{ listStyleType: "none" }}>
         {threads.map((thread) => (
-          <li key={thread.id} class="thread">
+          <li key={thread.id} className={styles.thread}>
             {thread.title}
           </li>
         ))}
       </ul>
-      <button onClick={handlePrev} disabled={offset === 0}>
-        Prev
-      </button>
-      <button onClick={handleNext}>Next</button>
+      <div className={styles.pagenations}>
+        <button onClick={handlePrev} disabled={offset === 0}>
+          Prev
+        </button>
+        <button onClick={handleNext}>Next</button>
+      </div>
     </div>
   );
 };

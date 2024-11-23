@@ -1,17 +1,35 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Threads } from "./Threads";
+import { Header } from "./components/Header";
+import { Threads } from "./components/Threads";
+import { CreateThread } from "./components/CreateThread";
 
 function App() {
   return (
     <>
-      <div>
-        <header class="header">
-          <h2 class="message">掲示板</h2>
-        </header>
-        <div>
-          <Threads />
-        </div>
-      </div>
+      <BrowserRouter>
+        {/* <Link to="/">Threads</Link> */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Threads />
+              </>
+            }
+          />
+          <Route
+            path="/threads/new"
+            element={
+              <>
+                <Header />
+                <CreateThread />
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
