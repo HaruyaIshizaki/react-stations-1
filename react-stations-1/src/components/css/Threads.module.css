@@ -1,0 +1,30 @@
+/* Threads.module.css */
+
+.threads {
+  display: flex;
+  /* 縦方向を主軸にする */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  font-size: 2rem;
+}
+
+.thread {
+  box-shadow: 10px 5px 5px gray;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-weight: 500;
+  font-family: inherit;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.pagenations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

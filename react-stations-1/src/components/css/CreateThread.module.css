@@ -1,0 +1,30 @@
+/* CreateThread.modules.css */
+
+.createThreadPage {
+  display: flex;
+  /* 縦方向を主軸にする */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.createThread {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message {
+  font-size: 2rem;
+}
+
+.input {
+  line-height: 1.5;
+  height: 40px;
+  margin: 1rem;
+}
+
+.a {
+    font-size: 1rem;
+  }
