@@ -1,0 +1,28 @@
+/* Thread.module.css */
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.comment {
+    box-shadow: 10px 5px 5px gray;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: inherit;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.pagenations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
