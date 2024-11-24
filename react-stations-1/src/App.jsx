@@ -3,6 +3,7 @@ import "./App.css";
 import { Header } from "./components/Header";
 import { Threads } from "./components/Threads";
 import { CreateThread } from "./components/CreateThread";
+import { Thread } from "./components/Thread";
 
 function App() {
   return (
@@ -25,6 +26,16 @@ function App() {
               <>
                 <Header />
                 <CreateThread />
+              </>
+            }
+          />
+          {/* TODO: 各スレッドの投稿一覧へのルーティング */}
+          <Route
+            path="/threads/:thread_id"
+            element={
+              <>
+                <Header />
+                <Thread />
               </>
             }
           />

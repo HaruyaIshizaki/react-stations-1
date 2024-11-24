@@ -1,5 +1,6 @@
 import styles from "./css/Threads.module.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Threads = () => {
   const [threads, setThreads] = useState([]);
@@ -38,7 +39,8 @@ export const Threads = () => {
       <ul style={{ listStyleType: "none" }}>
         {threads.map((thread) => (
           <li key={thread.id} className={styles.thread}>
-            {thread.title}
+            {/* Linkコンポーネントにpropsを渡せる */}
+            <Link to={`/threads/${thread.id}`} state={{title: thread.title}}>{thread.title}</Link>
           </li>
         ))}
       </ul>
